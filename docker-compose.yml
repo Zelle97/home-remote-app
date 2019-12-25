@@ -1,10 +1,10 @@
 version: '3'
 services:
   dashboard-server:
-    build: ./remote-server/
+    image: zellesdocker/remote-server
     ports:
       - "8888:8888"
   remote-dashboard:
-    build: ./remote-dashboard/
+    build: zellesdocker/remote-dashboard
     ports:
       - "80:80"
