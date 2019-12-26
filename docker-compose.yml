@@ -2,9 +2,12 @@ version: '2'
 services:
   dashboard-server:
     image: zellesdocker/remote-server
-    ports:
-      - "8888:8888"
+    restart: always
+    volumes:
+      - /YOUR/CONFIG/PATH:/usr/src/app/config
+    network_mode: "host"
   remote-dashboard:
     image: zellesdocker/remote-dashboard
+    restart: always
     ports:
       - "9999:80"

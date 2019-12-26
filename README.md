@@ -10,11 +10,16 @@ For a simpler usage we connected that backend with a frontend dashboard (https:/
 
 Its quite small and simple but works as intended.
 
+### Config
+
+The remote-server uses a config file. More info [here](https://github.com/Zelle97/remote-server).
+The config directory has to be mounted as a volume for the remote-server app to work.
+
 ## Docker on Raspberry
 
-We used the automated builds from DockerHub to create the images.
-Because DockerHub doesen't support multiple architecture builds, if you want to use this project on a raspberry you have to build the images from source.
+Because the automated builds between Github and Dockerhub dont work with different architectures it is recommended to build the Images from source.
 You will find the Instructions in the repos of the backend and dashboard.
+You can use the image inside of Dockerhub but it will probably be outdated. Just check the last updated and compare it with the source code history to be on the safe side.
 
 ##### Author & Licence
 
